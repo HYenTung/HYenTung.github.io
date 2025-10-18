@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童筱妍 Hsiao-Yen Tung (Yen Tung) - personal CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #340a4d;
+            --secondary-color: #8c79b9;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --section-bg: #fff;
+            --border-color: #eee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--section-bg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 標題區塊 - Header & Photo */
+        .header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .header-info h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .header-info p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .contact-info {
+            list-style: none;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .contact-info li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .certificate-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .certificate-item {
+            width: calc(50% - 10px); 
+            text-align: center;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .certificate-item img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain; 
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 10px;
+        }
+
+        .certificate-item p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .certificate-item {
+                width: 100%;
+            }
+        }
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .content-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: var(--text-color);
+        }
+
+        .item-subtitle {
+            font-size: 1em;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .item-date {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 400;
+            white-space: nowrap; /* 防止日期換行 */
+        }
+        
+        .item-description {
+            font-size: 0.95em;
+            margin-top: 8px;
+            padding-left: 5px;
+        }
+
+        .languages-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .languages-list li {
+            background-color: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        .self-highlight {
+            display: inline-block; 
+            border-bottom: 1.5px solid var(--primary-color); 
+            padding-bottom: 2px; 
+            font-weight: 700; 
+            color: var(--text-color) !important; 
+        }
+        .award-list, .publication-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .award-list li, .publication-list li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .award-list li::before, .publication-list li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .interests-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; 
+            margin-bottom: 20px;
+        }
+
+        .interest-tag {
+            background-color: var(--secondary-color); 
+            color: white; 
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .course-list-title {
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .course-list {
+            padding: 20px;
+        }
+
+        .course-list li {
+            font-size: 0.95em;
+            margin-bottom: 4px;
+            border-bottom: 1px dotted var(--border-color); 
+            padding-bottom: 4px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-photo {
+                margin: 0 0 15px 0;
+            }
+            .header-info h1 {
+                font-size: 2em;
+            }
+            .contact-info li {
+                display: block;
+                margin: 5px 0;
+            }
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .item-date {
+                margin-top: 5px;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <img src="./images/profile_image.jpg" alt="童筱妍 - Hsiao-Yen Tung (Yen)" class="profile-photo"> <div class="header-info">
+                <h1>童筱妍 Tung, Hsiao-Yen (Yen Tung)</h1>
+                <ul class="contact-info">
+                    <li>📧 <a href="mailto:b06401036@ntu.edu.tw">b06401036@ntu.edu.tw</a></li>
+                    <li>📞 (+886) 928021220</li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="content-item">
+                <div class="item-header">
+                    <div class="item-details">
+                        <div class="item-title">Doctor of Medicine</div>
+                        <div class="item-title">Double major in Computer Science & Information Engineering</div>
+                        <div class="item-subtitle">National Taiwan University, Taipei, Taiwan</div>
+                        <div class="item-subtitle">Overall GPA: 4.09/4.3 (92.3/100)</div>
+                        <div class="item-subtitle">Class rank: 35/153 (22.8%) </div>
+                    </div>
+                    <div class="item-date">2017 - 2024</div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title">JOB EXPERIENCE</h2>
+            <div class="content-item">
+                <div class="item-header">
+                    <div class="item-details">
+                        <div class="item-title">Intern at Aether AI</div>
+                    </div>
+                    <div class="item-date">2020</div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title">TECHNICAL SKILLS</h2>
+            <div class="content-item">
+                <div class="item-header">
+                    <div class="item-details">
+                        <div class="item-title">Programming Language: C, C++, Python, R</div>
+                        <div class="item-title">Data & ML: TensorFlow, PyTorch; model training, evaluation, deployment basics</div>
+                        <div class="item-title">Tools: Jupyter, LaTeX, Blender</div>
+                        <div class="item-title">Hardware/Fabrication: Arduino, 3D printing (FDM, Fused Deposition Modeling Printing), laser engraving/cutting</div>
+                        <div class="item-title">Statistics: experimental design, hypothesis testing, visualization</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+        <h2 class="section-title">RESEARCH INTERESTS</h2>
+        
+        <div class="content-item" style="border-left: none; padding-left: 0;">
+            
+            <div class="interests-tags">
+                <span class="interest-tag">Computer Vision</span>
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Bioinformatics</span>
+                <span class="interest-tag">Healthcare Applications</span>
+            </div>
+
+            <div class="course-list-title">Related Courses and Grades:</div>
+            <ul class="course-list">
+                <li>3D Computer Vision with Deep Learning Applications (<span style="font-weight: 700; color: var(--primary-color);">A+</span>)</li>
+                <li>Introduction to Biomedical Informatics (<span style="font-weight: 700; color: var(--primary-color);">A+</span>)</li>
+                <li>Digital Visual Effects (<span style="font-weight: 700; color: var(--primary-color);">A+</span>)</li>
+                <li>Computer Graphics (<span style="font-weight: 700; color: var(--primary-color);">A+</span>)</li>
+                <li>Machine Learning Techniques (<span style="font-weight: 700; color: var(--primary-color);">A</span>)</li>
+                <li>Introduction to AI (<span style="font-weight: 700; color: var(--primary-color);">A</span>)</li>
+                <li>Special Topics in Innovative Integration of Medicine and EECS (<span style="font-weight: 700; color: var(--primary-color);">A+</span>)</li>
+            </ul>
+            
+        </div>
+    </section>
+
+        <section class="section">
+            <h2 class="section-title">PUBLICATION</h2>
+            <div class="item-subtitle">Click a title to view the research!</div>
+            
+            <h3 class="item-title" style="margin-top: 20px;">PUBLICATION</h3>
+            
+            
+            <ul class="publication-list">
+                <li>
+                    <a href="https://ieeexplore.ieee.org/document/9356156" target="_blank" style="text-decoration: none; color: inherit;">
+                        Shih-Lun Wu, 
+                        <span class="self-highlight">Hsiao-Yen Tung</span>, 
+                        Yu-Lun Hsu. Deep Learning for Automatic Quality Grading of Mangoes: Methods and Insights, IEEE ICMLA 2020
+                    </a>
+                </li>
+                <li>
+                <a href="https://doi.org/10.1007/s10072-024-07641-2" target="_blank" style="text-decoration: none; color: inherit;">
+                        Peng-Hsiang Liao, <span class="self-highlight">Hsiao-Yen Tung</span>,  Wee Shin Lim, Jyh-Shing Roger Jang, Hsun Li, Chia-Tung Shun, Han-Mo Chiu, Ming-Shiang Wu & Chin-Hsien Lin. Impaired gut barrier integrity and reduced colonic expression of free fatty acid receptors in patients with Parkinson’s disease. Neurol Sci 45, 5297–5307 (2024). 
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2 class="section-title">AWARD</h2>
+            
+
+            <h3 class="item-title" style="margin-top: 20px;">AWARD</h3>
+            <div class="certificate-gallery">
+                <div class="certificate-item">
+                    <img src="./images/innovation_award.jpg" alt="Innovation Competition First Prize">
+                    <p>2020 NTU Biomedical Electronics and Bioinformatics Camp - Innovation First Prize</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title">EXAMINATIONS and CERTIFICATIONS</h2>
+            <div class="certificate-gallery">
+                <div class="certificate-item">
+                    <img src="./images/USMLE_step1.jpg" alt="USMLE step 1 passed">
+                    <p>USMLE step 1 passed</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section-title">EXTRACURRICULAR ACTIVITIES</h2>
+            <div class="content-item">
+                <div class="item-header">
+                    <div class="item-details">
+                        <div class="item-title">Academic minister, NTU Medical Student Association (台大醫學系學生會學術部部長)</div>
+                    </div>
+                </div>
+                <div class="item-description">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <h2 class="section-title">LANGUAGES</h2>
+            <p style="margin-bottom: 15px; font-size: 0.9em; font-style: italic;">"I love to learn new languages! Although I think it is mainly because I am a foodie, and I have to learn new languages to look for different recipes."</p>
+            <ul class="languages-list">
+                <li>Mandarin - proficient </li>
+                <li>English - fluent</li>
+                <li>Taiwanese - fluent</li>
+                <li>Indonesian - basic</li>
+                <li>Japanese - basic</li>
+                <li>Korean- basic</li>
+            </ul>
+        </section>
+
+    </div>
+</body>
+</html>
